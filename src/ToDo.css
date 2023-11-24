@@ -1,0 +1,150 @@
+* {
+    text-align: center;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+body {
+    background-color: #000;
+    overflow-x: hidden;
+    overflow: hidden;
+}
+P {
+    color: gold;
+    font-weight: bold;
+}
+b {
+    color: rgb(132, 31, 209);
+}
+.taskBlock {
+    margin: 20px 0 0 0;
+    border: 2px solid #ffffffd6;
+    display: flex;
+    padding: 8px;
+    width: auto;
+    gap: 16px;
+    transition: 0.1s;
+}
+.taskBlock:hover {
+    opacity: 0.7;
+}
+
+/* Todo lists */
+.TodoList {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.SearchBar {
+    display: flex;
+    padding: 5px 0px;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+    margin-bottom: 40px;
+    font-weight: bold;
+    border: none;
+}
+.SearchBar:hover {
+    padding: 5px 22px;
+    background-color: rgb(43, 218, 168);
+    overflow: hidden;
+    background: linear-gradient(90deg, #ac1ffd, rgb(46, 14, 55), rgb(36, 19, 62), #000000);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  } 
+  
+input {
+    width: 200px;
+}
+.todoBlock {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    cursor: pointer;
+}
+.TodayTodo {
+    padding: 9.5px 0 3px 0;
+}
+.todoButton {
+    cursor: cell;
+    width: 40px;
+    border: 2px solid rgb(0, 0, 0);
+    font-size: 20.4px;
+    transition: 0.2s;
+    
+}
+.todoButton:hover {
+    border-color: rgb(132, 31, 209);
+}
+.todoBlock--indent {
+    margin-right: 60px;
+    cursor: cell;
+    font-weight: normal;
+}
+.hover {
+    cursor: pointer;
+}
+.editInput {
+    margin-top: 10px;
+    border: 2px solid #ffffff80;
+    display: flex;
+    padding: 8px;
+    width: auto;
+    gap: 16px;
+}
+
+.circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #b834ff;
+    animation: moveCircle 8s linear infinite;
+    z-index: -1;
+  }
+  
+  @keyframes moveCircle {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(50vw, 0);
+    }
+    50% {
+      transform: translate(100vw, 50vh);
+    }
+    75% {
+      transform: translate(0, 100vh);
+    }
+    100% {
+      transform: translate(50vw, 0);
+    }
+  }
+
+  .Save {
+    font-size: 40px;
+    margin-top: 5px;
+    cursor: pointer;
+    margin-bottom: -30px;
+ }
+ .moon {
+    width: 40px;
+    margin-left: 1300px;
+ }
+ .moon--block {
+    background-color: rgb(52, 46, 55);
+    width: 100%;
+    box-shadow: inset 0px -10px 20px rgba(0,0,0,0.9);
+ }
