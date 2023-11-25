@@ -7,9 +7,11 @@ body {
     background-color: #000;
     overflow-x: hidden;
     overflow: hidden;
+    overflow-y: scroll;
 }
+
 P {
-    color: gold;
+    color: rgb(255, 0, 55);
     font-weight: bold;
 }
 b {
@@ -43,14 +45,18 @@ b {
     margin-bottom: 40px;
     font-weight: bold;
     border: none;
+    background-color: #000000;
+    border: 2px solid #fff;
+    color: #33c1a7;
 }
 .SearchBar:hover {
     padding: 5px 22px;
     background-color: rgb(43, 218, 168);
     overflow: hidden;
-    background: linear-gradient(90deg, #ac1ffd, rgb(46, 14, 55), rgb(36, 19, 62), #000000);
+    background: linear-gradient(90deg, #1ffdbe, rgb(32, 14, 55), rgb(92, 10, 10), #fd1f1f);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
+    border: 2px solid #000;
 }
   
   @keyframes gradient {
@@ -75,19 +81,35 @@ input {
     cursor: pointer;
 }
 .TodayTodo {
-    padding: 9.5px 0 3px 0;
+    padding: 3px 0 3.8px 0;
+    background-color: #000000;
+    border: 2px solid #ffffff74;
+    color: #33c1a7;
+    transition: 0.2s;
+}
+.TodayTodo:hover {
+  border: 2px solid #ffffffcf;
+  cursor: pointer;
 }
 .todoButton {
     cursor: cell;
     width: 40px;
-    border: 2px solid rgb(0, 0, 0);
-    font-size: 20.4px;
+    border: 2px solid rgba(132, 31, 209, 0.456);
     transition: 0.2s;
-    
+    background-color: #000000;
 }
 .todoButton:hover {
     border-color: rgb(132, 31, 209);
 }
+.todoButton:hover .todoButton--icon {
+  opacity: 1;
+}
+.todoButton--icon {
+  font-size: 25px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
 .todoBlock--indent {
     margin-right: 60px;
     cursor: cell;
@@ -103,17 +125,17 @@ input {
     padding: 8px;
     width: auto;
     gap: 16px;
+    background-color: #000000;
+    border: 2px solid #ffffff74;
+    color: #efefef;
+    transition: 0.3s;
+    margin-bottom: 10px;
+}.editInput:hover {
+  cursor: pointer;
+  color: #c95009;
+  border: 2px solid #c95009;
 }
 
-.circle {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #b834ff;
-    animation: moveCircle 8s linear infinite;
-    z-index: -1;
-  }
   
   @keyframes moveCircle {
     0% {
@@ -140,11 +162,15 @@ input {
     margin-bottom: -30px;
  }
  .moon {
-    width: 40px;
-    margin-left: 1300px;
+    width: 350px;
+    margin: 0 auto;
  }
- .moon--block {
-    background-color: rgb(52, 46, 55);
+ .icon--block {
     width: 100%;
-    box-shadow: inset 0px -10px 20px rgba(0,0,0,0.9);
+    height: 100%;
+    box-shadow: inset 0px -28px 36px rgb(39, 216, 192);
+    margin-bottom: 40px;
+    display: flex
  }
+
+

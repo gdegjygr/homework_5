@@ -4,7 +4,8 @@ import { AiOutlineAppstoreAdd } from "react-icons/ai";
 import { RiEditLine } from "react-icons/ri";
 import { FaTrashCan } from "react-icons/fa6";
 import { IoSaveOutline } from "react-icons/io5";
-import dark from './moon-image.png'
+import dark from './mgr-image.png'
+import './Canvas.js'
 
 
 export default function ToDo() {
@@ -64,7 +65,7 @@ export default function ToDo() {
 
     return(
         <div className="TodoList">
-            <div className="moon--block">
+            <div className="icon--block">
                 <img src={dark} alt="#" className="moon"/>
             </div>
             <div className="addTodoBlock">
@@ -84,7 +85,9 @@ export default function ToDo() {
                     onChange={innerinput}
                 />
                 <button onClick={addTodo} className="todoButton">
-                    <AiOutlineAppstoreAdd/>
+                    <b className="todoButton--icon">
+                        <AiOutlineAppstoreAdd/>
+                    </b>
                 </button>
             </div>
             {filterSearchBar.map(item => (
@@ -114,9 +117,8 @@ export default function ToDo() {
                     )}
                 </div>
             ))}
-            <div class="circle"></div>
-                <div class="circle"></div>
-                    <div class="circle"></div>
+            {/* Canvas animation */}
+            <canvas id='world'></canvas>
         </div>
     )
 };
